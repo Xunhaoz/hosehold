@@ -7,7 +7,9 @@
 ### 專案架構
 ```
 ├── README.md
-├── data - 目前只有存放原始 CSV 資料
+├── data 
+│   ├── raw 存放原始 CSV 資料
+│   └── result csv 存放 CSV 報告
 ├── dataloader - 是個放資料前處理的 class 的地方
 ├── predictor - 是個做預測及驗證的地方
 ├── requirements.txt
