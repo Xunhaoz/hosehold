@@ -68,3 +68,12 @@ DELETE: what
 > before para finding mse = 30237992697.9192 \
 > after para finding mse =  \
 > 資料篩選, 剔除極端值, extra_trees_regressor
+
+ 
+> lgbm_regressor - baseline \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz005.py \
+> train mse = 149967668729.3877 \
+> before para finding mse = 135916482312.5306 \
+> after para finding mse =  \
+> 資料篩選, 剔除極端值, extra_trees_regressor
