@@ -12,7 +12,7 @@ rf = RandomForestRegressor(n_jobs=-1)
 train_data, train_label = dl.get_data_label()
 res = cross_validate(
     rf, train_data, train_label,
-    cv=5, verbose=1, return_train_score=True, scoring='neg_mean_squared_error'
+    cv=5, verbose=1, return_train_score=True, scoring='neg_mean_absolute_error'
 )
 
 test_score = -res['test_score'].mean()
