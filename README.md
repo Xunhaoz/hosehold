@@ -33,14 +33,30 @@ DELETE: what
 
 ### REPORT
 #### **_raw data 唯讀 ！！！！！！！_**
-#### **_train: valid = 0.7: 0.3_**
+#### **_train: valid = 0.8: 0.2_**
 #### **_使用 five cross validation_**
 #### **_使用 five cross valid_**
 
-> EXAMPLE(title) \
+> 線性回歸 - baseline \
 > dataloader data_xunhaoz001.py \
 > predictor code_xunhaoz001.py \
-> before para finding mse = 1.15 \
-> after para finding mse = 1.05 \
-> describe something...
+> train mse = 207961125186.6589 \
+> before para finding mse = 208235595500.1610 \
+> after para finding mse =  \
+> 資料篩選, 剔除極端值, 線性回歸
 
+> xgboost - baseline \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz002.py \
+> train mse = 116527097296.6626 \
+> before para finding mse = 160159458723.4670 \
+> after para finding mse =  \
+> 資料篩選, 剔除極端值, xgboost
+
+> random_forest - baseline \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz003.py \
+> train mse = 188255005038.0431 \
+> before para finding mse = 48022261133.9113 \
+> after para finding mse =  \
+> 資料篩選, 剔除極端值, random_forest

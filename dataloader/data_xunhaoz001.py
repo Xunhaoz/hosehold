@@ -24,7 +24,8 @@ class DataXunhaoz001:
         self._df['MRG'] = self._df['MRG'].apply(lambda x: 97 if 94 <= x <= 96 else x)
         self._df['MRG'] = self._df['MRG'].apply(lambda x: x if 91 <= x <= 97 else 90)
 
-        self._df = self._df.drop(columns=['IMR', 'PERSON'])
+        self._df = self._df.drop(columns=['IMR', 'PERSON', 'YEAR', 'ID'])
+        self._df = self._df.reset_index(drop=True)
 
     def get_data_label(self):
         return self._df.drop(columns=['ITM40']), self._df[['ITM40']]
