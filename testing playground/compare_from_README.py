@@ -7,9 +7,9 @@ with open('../README.md', 'r', encoding="utf-8") as f:
 
 lines = f.split('#### **_使用 five cross valid_**')[1].split('\n')
 
-train_mse = {}
-before_para_finding_mse = {}
-after_para_finding_mse = {}
+train_mae = {}
+before_para_finding_mae = {}
+after_para_finding_mae = {}
 
 last_line = ''
 for index, line in enumerate(lines):
@@ -20,20 +20,24 @@ for index, line in enumerate(lines):
             if reader == '':
                 break
 
-            match = re.search(r'(\d+\.\d+)', reader)
+            match = re.search(r'(\d+)', reader)
             if match:
-                number = float(match.group(1))
+                number = int(match.group(1))
                 cleaned_string = re.sub(r'[^a-zA-Z ]', '', reader).strip()
-                if cleaned_string == 'train mse':
-                    train_mse[name] = number
-                elif cleaned_string == 'before para finding mse':
-                    before_para_finding_mse[name] = number
-                elif cleaned_string == 'after para finding mse':
-                    after_para_finding_mse[name] = number
+                if cleaned_string == 'train mae':
+                    train_mae[name] = number
+                elif cleaned_string == 'before para finding mae':
+                    before_para_finding_mae[name] = number
+                elif cleaned_string == 'after para finding mae':
+                    after_para_finding_mae[name] = number
 
     last_line = line
 
 
-pprint(train_mse)
-pprint(before_para_finding_mse)
-pprint(after_para_finding_mse)
+# pprint(train_mae)
+# pprint(before_para_finding_mae)
+# pprint(after_para_finding_mae)
+
+print(sorted(train_mae.items(), key=lambda x: x[1]))
+print(sorted(before_para_finding_mae.items(), key=lambda x: x[1]))
+print(sorted(after_para_finding_mae.items(), key=lambda x: x[1]))
