@@ -43,7 +43,7 @@ DELETE: what
 > train mse = 207961125186.6589 \
 > before para finding mse = 208235595500.1610 \
 > after para finding mse =  \
-> 資料篩選, 剔除極端值, 線性回歸
+> 資料篩選-剔除極端值, 線性回歸
 
 > xgboost - baseline \
 > dataloader data_xunhaoz001.py \
@@ -51,7 +51,7 @@ DELETE: what
 > train mse = 116527097296.6626 \
 > before para finding mse = 160159458723.4670 \
 > after para finding mse =  \
-> 資料篩選, 剔除極端值, xgboost
+> 資料篩選-剔除極端值, xgboost
 
 > random_forest - baseline \
 > dataloader data_xunhaoz001.py \
@@ -59,7 +59,7 @@ DELETE: what
 > train mse = 188255005038.0431 \
 > before para finding mse = 48022261133.9113 \
 > after para finding mse =  \
-> 資料篩選, 剔除極端值, random_forest
+> 資料篩選-剔除極端值, random_forest
 
 > extra_trees_regressor - baseline \
 > dataloader data_xunhaoz001.py \
@@ -67,8 +67,7 @@ DELETE: what
 > train mse = 205836012057.1338 \
 > before para finding mse = 30237992697.9192 \
 > after para finding mse =  \
-> 資料篩選, 剔除極端值, extra_trees_regressor
-
+> 資料篩選-剔除極端值, extra_trees_regressor
  
 > lgbm_regressor - baseline \
 > dataloader data_xunhaoz001.py \
@@ -76,4 +75,12 @@ DELETE: what
 > train mse = 149967668729.3877 \
 > before para finding mse = 135916482312.5306 \
 > after para finding mse =  \
-> 資料篩選, 剔除極端值, extra_trees_regressor
+> 資料篩選-剔除極端值, lgbm_regressor
+
+> catboost - baseline \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz006.py \
+> train mse = 152864670413.1408 \
+> before para finding mse = 120433189517.8904 \
+> after para finding mse =  \
+> 資料篩選-剔除極端值, catboost
