@@ -1,4 +1,4 @@
-from dataloader.data_xunhaoz001 import DataXunhaoz001
+from dataloader.data_xunhaoz002 import DataXunhaoz002
 import warnings
 
 from sklearn.model_selection import cross_validate
@@ -6,7 +6,7 @@ from lightgbm import LGBMRegressor
 
 warnings.filterwarnings('ignore')
 
-dl = DataXunhaoz001()
+dl = DataXunhaoz002()
 lgbm = LGBMRegressor(n_jobs=-1, verbose=0)
 
 train_data, train_label = dl.get_data_label()

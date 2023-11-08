@@ -53,11 +53,27 @@ DELETE: what
 > after para finding mae =  \
 > 資料篩選-剔除極端值, 線性回歸
 
+> 線性回歸 - onehot \
+> dataloader data_xunhaoz002.py \
+> predictor code_xunhaoz001.py \
+> train mae = 207481 \
+> before para finding mae = 208770 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, 線性回歸
+
 > xgboost - baseline \
 > dataloader data_xunhaoz001.py \
 > predictor code_xunhaoz002.py \
 > train mae = 177721 \
 > before para finding mae = 187149 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, xgboost
+
+> xgboost - onehot \
+> dataloader data_xunhaoz002.py \
+> predictor code_xunhaoz002.py \
+> train mae = 177394 \
+> before para finding mae = 187351 \
 > after para finding mae =  \
 > 資料篩選-剔除極端值, xgboost
 
@@ -69,11 +85,27 @@ DELETE: what
 > after para finding mae =  \
 > 資料篩選-剔除極端值, random_forest
 
+> random_forest - onehot \
+> dataloader data_xunhaoz002.py \
+> predictor code_xunhaoz003.py \
+> train mae = 107572 \
+> before para finding mae = 204512 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, random_forest
+
 > extra_trees_regressor - baseline \
 > dataloader data_xunhaoz001.py \
 > predictor code_xunhaoz004.py \
 > train mae = 64263 \
 > before para finding mae = 217228 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, extra_trees_regressor
+
+> extra_trees_regressor - onehot \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz004.py \
+> train mae = 64263 \
+> before para finding mae = 221386 \
 > after para finding mae =  \
 > 資料篩選-剔除極端值, extra_trees_regressor
 
@@ -85,10 +117,26 @@ DELETE: what
 > after para finding mae =  \
 > 資料篩選-剔除極端值, lgbm_regressor
 
+> lgbm_regressor - onehot \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz005.py \
+> train mae = 184285 \
+> before para finding mae = 188149 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, lgbm_regressor
+
 > catboost - baseline \
 > dataloader data_xunhaoz001.py \
 > predictor code_xunhaoz006.py \
 > train mae = 178968 \
 > before para finding mae = 185636 \
+> after para finding mae =  \
+> 資料篩選-剔除極端值, catboost
+
+> catboost - onehot \
+> dataloader data_xunhaoz001.py \
+> predictor code_xunhaoz006.py \
+> train mae = 178380 \
+> before para finding mae = 185716 \
 > after para finding mae =  \
 > 資料篩選-剔除極端值, catboost

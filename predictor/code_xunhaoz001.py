@@ -1,13 +1,13 @@
-from dataloader.data_xunhaoz001 import DataXunhaoz001
+from dataloader.data_xunhaoz002 import DataXunhaoz002
 from sklearn.model_selection import cross_validate
 from sklearn.linear_model import LinearRegression
 
-dl = DataXunhaoz001()
+dl = DataXunhaoz002()
 lr = LinearRegression()
 
 train_data, train_label = dl.get_data_label()
 res = cross_validate(
-    lr, train_data, train_label,
+    lr, train_data, train_label, n_jobs=-1,
     cv=5, verbose=1, return_train_score=True, scoring='neg_mean_absolute_error'
 )
 

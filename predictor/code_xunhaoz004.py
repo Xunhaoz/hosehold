@@ -1,4 +1,4 @@
-from dataloader.data_xunhaoz001 import DataXunhaoz001
+from dataloader.data_xunhaoz002 import DataXunhaoz002
 import warnings
 
 from sklearn.model_selection import cross_validate
@@ -6,7 +6,7 @@ from sklearn.ensemble import ExtraTreesRegressor
 
 warnings.filterwarnings('ignore')
 
-dl = DataXunhaoz001()
+dl = DataXunhaoz002()
 etr = ExtraTreesRegressor(n_jobs=-1)
 
 train_data, train_label = dl.get_data_label()
